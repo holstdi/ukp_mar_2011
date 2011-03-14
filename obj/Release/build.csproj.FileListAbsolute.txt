@@ -1,0 +1,7 @@
+E:\src\nbdn\prep\bin\Release\build.dll
+E:\src\nbdn\prep\bin\Release\build.pdb
+E:\src\nbdn\prep\obj\Release\ResolveAssemblyReference.cache
+E:\src\nbdn\prep\obj\Release\build.dll
+E:\src\nbdn\prep\obj\Release\build.pdb
+E:\src\nbdn\prep\obj\Release\Decl\build.dll
+E:\src\nbdn\prep\obj\Release\Decl\build.pdb
