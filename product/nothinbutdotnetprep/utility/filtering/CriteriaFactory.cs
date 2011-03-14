@@ -18,7 +18,13 @@ namespace nothinbutdotnetprep.utility.filtering
 
         public Criteria<ItemToFilter> equal_to_any(params ReturnType[] values)
         {
-            throw new NotImplementedException();
+            
+            var returnValue =  equal_to(values[0]);
+            for (int i = 1; i < values.Length; i++)
+            {
+                return returnValue.or(equal_to(values[i]));
+            }
+            return returnValue;
         }
     }
 }
