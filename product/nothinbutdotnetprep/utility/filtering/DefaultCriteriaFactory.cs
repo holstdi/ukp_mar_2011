@@ -27,7 +27,7 @@ namespace nothinbutdotnetprep.utility.filtering
             return new NotCriteria<ItemToFilter>(equal_to(value));
         }
 
-        public ReturnType GetPropertyValue(ItemToFilter item)
+        public ReturnType get_property_value(ItemToFilter item)
         {
             return property_accessor(item);
         }

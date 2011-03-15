@@ -27,9 +27,9 @@ namespace nothinbutdotnetprep.utility.filtering
             return original_factory.not_equal_to(value);
         }
 
-        public ReturnType GetPropertyValue(ItemToFilter item)
+        public ReturnType get_property_value(ItemToFilter item)
         {
-            return original_factory.GetPropertyValue(item);
+            return original_factory.get_property_value(item);
         }
 
         public Criteria<ItemToFilter> create_from(MatchingCondition<ItemToFilter> condition)
@@ -39,13 +39,13 @@ namespace nothinbutdotnetprep.utility.filtering
  
         public Criteria<ItemToFilter> greater_than(ReturnType value)
         {
-            return create_from(item => GetPropertyValue(item).CompareTo(value) > 0);
+            return create_from(item => get_property_value(item).CompareTo(value) > 0);
         }
 
         public Criteria<ItemToFilter> between(ReturnType start, ReturnType end)
         {
-            return create_from(item => GetPropertyValue(item).CompareTo(start) >= 0 &&
-                GetPropertyValue(item).CompareTo(end) <= 0);
+            return create_from(item => get_property_value(item).CompareTo(start) >= 0 &&
+                get_property_value(item).CompareTo(end) <= 0);
         }
 
     }
