@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace nothinbutdotnetprep.utility.filtering
 {
@@ -24,6 +25,16 @@ namespace nothinbutdotnetprep.utility.filtering
         public Criteria<ItemToFilter> not_equal_to(ReturnType value)
         {
             return new NotCriteria<ItemToFilter>(equal_to(value));
+        }
+
+        public ReturnType GetPropertyValue(ItemToFilter item)
+        {
+            return property_accessor(item);
+        }
+
+        public PropertyAccessor<ItemToFilter, ReturnType> propertyaccessor
+        {
+            get { return property_accessor; }
         }
 
         public Criteria<ItemToFilter> create_from(MatchingCondition<ItemToFilter> condition)
