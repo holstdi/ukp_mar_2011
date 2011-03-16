@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 
 namespace nothinbutdotnetprep.utility.filtering
 {
@@ -9,9 +10,7 @@ namespace nothinbutdotnetprep.utility.filtering
             return equal_to_any(default_filtering_extension_point,value_to_equal);
         }
 
-
-        public static Criteria<ItemToFilter> equal_to_any<ItemToFilter,ReturnType>(this FilteringExtensionPoint<ItemToFilter,ReturnType> extension_point,params ReturnType[] values)
-        {
+        public static Criteria<ItemToFilter> equal_to_any<ItemToFilter,ReturnType>(this FilteringExtensionPoint<ItemToFilter,ReturnType> extension_point,params ReturnType[] values) {
             return create_criteria_using(extension_point, new IsEqualToAny<ReturnType>(values));
         }
 
